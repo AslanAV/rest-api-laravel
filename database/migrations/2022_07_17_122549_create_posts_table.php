@@ -20,7 +20,7 @@ return new class extends Migration
             $table->longText('content');
             $table->integer('state');
 
-            $table->foreignIdFor(\App\Models\User::class, user_id);
+            $table->foreignIdFor(\App\Models\User::class, 'user_id');
 
             $table->timestamps();
         });

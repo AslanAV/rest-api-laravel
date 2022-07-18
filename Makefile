@@ -7,8 +7,5 @@ su:
 gaa:
 	git add .
 
-gcm:
-	git commit -m
-
 gp:
 	git push

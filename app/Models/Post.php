@@ -10,7 +10,7 @@ class Post extends Model
 {
     use HasFactory;
 
-    public const STAT_DRAFT = 0;
+    public const STATE_DRAFT = 0;
     public const STATE_PUBLISHED = 1;
 
     protected $fillable = [
