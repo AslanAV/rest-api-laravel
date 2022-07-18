@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -13,7 +14,7 @@ class PostFactory extends Factory
     /**
      * Define the model's default state.
      *
-     * @return array<string, mixed>
+     * @return array
      */
     public function definition()
     {
@@ -21,6 +22,7 @@ class PostFactory extends Factory
             'title' => 'Post Name',
             'content' => '<p>Post Content</p>',
             'state' => Post::STATE_DRAFT,
+            'user_id' => fn() => User::factory()->create()->id,
         ];
     }
 }
